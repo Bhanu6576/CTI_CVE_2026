@@ -1,0 +1,729 @@
+# Vulnerability Advisory Filter Configuration
+# For Navisite LLC and Accenture LLC SOC and Vulnerability Management Teams
+#
+# This file contains keyword categories used to filter security advisories
+# to only show relevant vulnerabilities matching the technology stack
+
+# Severity threshold configuration
+severity:
+  enabled: true
+  levels:
+    - critical
+    - high
+    - medium
+  # Minimum CVSS score
+  min_cvss: 4.0
+
+# Keyword categories for filtering
+# Each category contains relevant keywords that trigger a match
+categories:
+  
+  # 1. Cloud & Virtualization
+  cloud_virtualization:
+    name: "Cloud & Virtualization"
+    keywords:
+      - AWS
+      - Azure
+      - GCP
+      - Google Cloud
+      - VMware
+      - vSphere
+      - ESXi
+      - vCenter
+      - Hyper-V
+      - KVM
+      - Xen
+      - OpenStack
+      - CloudStack
+      - Citrix
+      - VirtualBox
+      - Proxmox
+      - Cloud Foundry
+      - OpenShift
+      - Rancher
+
+  # 2. Operating Systems
+  operating_systems:
+    name: "Operating Systems"
+    keywords:
+      - Windows
+      - Windows Server
+      - Linux
+      - Ubuntu
+      - Debian
+      - Red Hat
+      - RHEL
+      - CentOS
+      - Rocky Linux
+      - AlmaLinux
+      - Fedora
+      - SUSE
+      - Oracle Linux
+      - Amazon Linux
+      - macOS
+      - Unix
+      - FreeBSD
+      - Solaris
+      - AIX
+
+  # 3. Databases
+  databases:
+    name: "Databases"
+    keywords:
+      - Oracle Database
+      - SQL Server
+      - MySQL
+      - MariaDB
+      - PostgreSQL
+      - MongoDB
+      - Redis
+      - Cassandra
+      - CouchDB
+      - DynamoDB
+      - ElasticSearch
+      - Elasticsearch
+      - InfluxDB
+      - Neo4j
+      - Couchbase
+      - RavenDB
+      - DB2
+      - Sybase
+      - SQLite
+      - memcached
+
+  # 4. Application Servers & Middleware
+  app_servers_middleware:
+    name: "Application Servers & Middleware"
+    keywords:
+      - Apache Tomcat
+      - JBoss
+      - WildFly
+      - WebLogic
+      - WebSphere
+      - Nginx
+      - Apache HTTP
+      - IIS
+      - Jetty
+      - GlassFish
+      - Payara
+      - Undertow
+      - Puma
+      - Gunicorn
+      - uWSGI
+      - Passenger
+      - HAProxy
+      - Traefik
+      - Envoy
+      - Kong
+
+  # 5. Networking & Firewalls
+  networking_firewalls:
+    name: "Networking & Firewalls"
+    keywords:
+      - Cisco
+      - Juniper
+      - Palo Alto
+      - Fortinet
+      - FortiGate
+      - F5
+      - BIG-IP
+      - Checkpoint
+      - pfSense
+      - iptables
+      - firewalld
+      - Arista
+      - Aruba
+      - Meraki
+      - SonicWall
+      - WatchGuard
+      - Sophos
+      - Barracuda
+      - Netgear
+      - Ubiquiti
+
+  # 6. Security Products
+  security_products:
+    name: "Security Products"
+    keywords:
+      - Splunk
+      - QRadar
+      - Sentinel
+      - Microsoft Sentinel
+      - CrowdStrike
+      - Falcon
+      - Carbon Black
+      - McAfee
+      - Symantec
+      - Trend Micro
+      - Kaspersky
+      - Palo Alto Cortex
+      - SentinelOne
+      - Rapid7
+      - Tenable
+      - Nessus
+      - Qualys
+      - Snort
+      - Suricata
+      - OSSEC
+      - Wazuh
+      - AlienVault
+      - ArcSight
+      - LogRhythm
+
+  # 7. DevOps & CI/CD
+  devops_cicd:
+    name: "DevOps & CI/CD"
+    keywords:
+      - Jenkins
+      - GitLab
+      - GitHub
+      - GitHub Actions
+      - Azure DevOps
+      - Azure Pipelines
+      - CircleCI
+      - Travis CI
+      - Bamboo
+      - TeamCity
+      - Drone
+      - Spinnaker
+      - Argo CD
+      - ArgoCD
+      - Flux
+      - Tekton
+      - Concourse
+      - Buildkite
+      - Harness
+      - CodePipeline
+
+  # 8. Containers & Orchestration
+  containers_orchestration:
+    name: "Containers & Orchestration"
+    keywords:
+      - Docker
+      - Kubernetes
+      - K8s
+      - containerd
+      - CRI-O
+      - Podman
+      - ECS
+      - EKS
+      - AKS
+      - GKE
+      - Nomad
+      - Mesos
+      - Marathon
+      - Docker Swarm
+      - runc
+      - LXC
+      - LXD
+      - Helm
+      - Kustomize
+
+  # 9. Infrastructure as Code
+  infrastructure_as_code:
+    name: "Infrastructure as Code"
+    keywords:
+      - Terraform
+      - Ansible
+      - Chef
+      - Puppet
+      - SaltStack
+      - CloudFormation
+      - ARM Templates
+      - Pulumi
+      - Vagrant
+      - Packer
+      - Bicep
+      - CDK
+      - AWS CDK
+      - Crossplane
+      - Terraform Cloud
+
+  # 10. Collaboration Tools
+  collaboration_tools:
+    name: "Collaboration Tools"
+    keywords:
+      - Microsoft 365
+      - Office 365
+      - SharePoint
+      - Teams
+      - Microsoft Teams
+      - Slack
+      - Zoom
+      - WebEx
+      - Skype
+      - Jira
+      - Confluence
+      - ServiceNow
+      - Trello
+      - Asana
+      - Monday.com
+      - Notion
+      - Mattermost
+      - RocketChat
+      - Discord
+
+  # 11. Web Platforms & CMS
+  web_platforms_cms:
+    name: "Web Platforms & CMS"
+    keywords:
+      - WordPress
+      - Drupal
+      - Joomla
+      - Magento
+      - Shopify
+      - WooCommerce
+      - Sitecore
+      - Adobe Experience Manager
+      - Contentful
+      - Strapi
+      - Ghost
+      - Jekyll
+      - Hugo
+      - Gatsby
+      - Next.js
+      - Nuxt.js
+
+  # 12. Frameworks & Runtimes
+  frameworks_runtimes:
+    name: "Frameworks & Runtimes"
+    keywords:
+      - Java
+      - Node.js
+      - Python
+      - .NET
+      - .NET Core
+      - PHP
+      - Ruby
+      - Go
+      - Rust
+      - Spring Boot
+      - Spring Framework
+      - Django
+      - Flask
+      - FastAPI
+      - Express
+      - Rails
+      - Laravel
+      - Symfony
+      - ASP.NET
+
+  # 13. UI Libraries
+  ui_libraries:
+    name: "UI Libraries"
+    keywords:
+      - React
+      - Angular
+      - Vue.js
+      - Vue
+      - jQuery
+      - Bootstrap
+      - Material-UI
+      - Ant Design
+      - Ember.js
+      - Backbone.js
+      - Svelte
+      - Alpine.js
+      - Tailwind CSS
+      - HTMX
+
+  # 14. Package Managers
+  package_managers:
+    name: "Package Managers"
+    keywords:
+      - npm
+      - yarn
+      - pip
+      - Maven
+      - Gradle
+      - NuGet
+      - Composer
+      - RubyGems
+      - Cargo
+      - Go Modules
+      - apt
+      - yum
+      - dnf
+      - Chocolatey
+      - Homebrew
+      - pacman
+      - zypper
+
+  # 15. Storage & Backup
+  storage_backup:
+    name: "Storage & Backup"
+    keywords:
+      - NetApp
+      - Veeam
+      - Commvault
+      - Veritas
+      - Acronis
+      - Rubrik
+      - Cohesity
+      - EMC
+      - Dell EMC
+      - Pure Storage
+      - HPE
+      - Nimble
+      - Isilon
+      - StorSimple
+      - Azure Backup
+      - AWS Backup
+      - Bacula
+      - Duplicati
+      - Restic
+      - Borg
+
+  # 16. Big Data & Analytics
+  big_data_analytics:
+    name: "Big Data & Analytics"
+    keywords:
+      - Hadoop
+      - Spark
+      - Apache Spark
+      - Tableau
+      - Power BI
+      - Qlik
+      - Looker
+      - Apache Kafka
+      - Kafka
+      - Flink
+      - Storm
+      - Hive
+      - Presto
+      - Trino
+      - Databricks
+      - Snowflake
+      - Redshift
+      - BigQuery
+      - Splunk
+      - Kibana
+
+  # 17. Email & Messaging
+  email_messaging:
+    name: "Email & Messaging"
+    keywords:
+      - Exchange
+      - Microsoft Exchange
+      - Outlook
+      - Postfix
+      - Sendmail
+      - Exim
+      - Dovecot
+      - Zimbra
+      - Gmail
+      - ProtonMail
+      - RabbitMQ
+      - ActiveMQ
+      - IBM MQ
+      - NATS
+      - ZeroMQ
+      - Pulsar
+      - Amazon SES
+      - SendGrid
+      - Mailgun
+
+  # 18. Identity & Authentication
+  identity_auth:
+    name: "Identity & Authentication"
+    keywords:
+      - Active Directory
+      - LDAP
+      - Okta
+      - Auth0
+      - Keycloak
+      - Azure AD
+      - Azure Active Directory
+      - Entra ID
+      - Ping Identity
+      - OneLogin
+      - Duo
+      - CyberArk
+      - Vault
+      - HashiCorp Vault
+      - AWS IAM
+      - SAML
+      - OAuth
+      - OpenID Connect
+      - Kerberos
+      - RADIUS
+
+  # 19. Protocols & Core Services
+  protocols_core_services:
+    name: "Protocols & Core Services"
+    keywords:
+      - SSH
+      - OpenSSH
+      - RDP
+      - SMB
+      - CIFS
+      - NFS
+      - DNS
+      - BIND
+      - DHCP
+      - FTP
+      - SFTP
+      - HTTP
+      - HTTPS
+      - TLS
+      - SSL
+      - IPsec
+      - VPN
+      - OpenVPN
+      - WireGuard
+      - LDAPS
+      - Samba
+      - NTP
+
+  # 20. SCADA/OT/Telecom
+  scada_ot_telecom:
+    name: "SCADA/OT/Telecom"
+    keywords:
+      - SCADA
+      - ICS
+      - Siemens
+      - Schneider Electric
+      - Rockwell
+      - Allen-Bradley
+      - Modbus
+      - OPC
+      - PROFINET
+      - BACnet
+      - DNP3
+      - IEC 61850
+      - PLC
+      - HMI
+      - DCS
+      - RTU
+      - 5G
+      - LTE
+      - telecommunications
+
+  # 21. Payment & E-commerce
+  payment_ecommerce:
+    name: "Payment & E-commerce"
+    keywords:
+      - Stripe
+      - PayPal
+      - Square
+      - Braintree
+      - Adyen
+      - Authorize.net
+      - Worldpay
+      - payment gateway
+      - PCI DSS
+      - credit card
+      - payment processing
+      - Shopify Payments
+      - Apple Pay
+      - Google Pay
+      - WooCommerce
+
+  # 22. Healthcare Systems
+  healthcare:
+    name: "Healthcare Systems"
+    keywords:
+      - HIPAA
+      - HL7
+      - FHIR
+      - Epic
+      - Cerner
+      - Meditech
+      - Allscripts
+      - PACS
+      - DICOM
+      - EMR
+      - EHR
+      - healthcare
+      - medical records
+      - patient data
+
+  # 23. CDNs & Edge
+  cdn_edge:
+    name: "CDNs & Edge"
+    keywords:
+      - Cloudflare
+      - Akamai
+      - Fastly
+      - CloudFront
+      - Azure CDN
+      - CDN77
+      - StackPath
+      - KeyCDN
+      - BunnyCDN
+      - Varnish
+      - Squid
+      - CDN
+      - edge computing
+      - content delivery
+
+  # 24. Observability & Monitoring
+  observability_monitoring:
+    name: "Observability & Monitoring"
+    keywords:
+      - Prometheus
+      - Grafana
+      - Datadog
+      - New Relic
+      - AppDynamics
+      - Dynatrace
+      - Nagios
+      - Zabbix
+      - Icinga
+      - Sensu
+      - Telegraf
+      - StatsD
+      - Jaeger
+      - Zipkin
+      - OpenTelemetry
+      - ELK Stack
+      - Loki
+      - Tempo
+      - Thanos
+      - Cortex
+
+  # 25. Vulnerable Libraries & Components
+  vulnerable_libraries:
+    name: "Vulnerable Libraries"
+    keywords:
+      - log4j
+      - Log4Shell
+      - OpenSSL
+      - Heartbleed
+      - Apache Struts
+      - Spring4Shell
+      - Shellshock
+      - bash
+      - curl
+      - wget
+      - libcurl
+      - zlib
+      - glibc
+      - libxml2
+      - libpng
+      - libjpeg
+      - ImageMagick
+      - FFmpeg
+      - Pillow
+
+  # 26. Critical File Patterns
+  critical_patterns:
+    name: "Critical File Patterns"
+    keywords:
+      - remote code execution
+      - RCE
+      - privilege escalation
+      - authentication bypass
+      - SQL injection
+      - cross-site scripting
+      - XSS
+      - CSRF
+      - deserialization
+      - path traversal
+      - directory traversal
+      - buffer overflow
+      - use after free
+      - null pointer
+      - denial of service
+      - DoS
+      - DDoS
+      - zero-day
+      - 0-day
+      - arbitrary code
+      - arbitrary file
+      - information disclosure
+      - memory corruption
+      - command injection
+      - XXE
+      - SSRF
+
+  # 27. Company-Specific Keywords
+  company_specific:
+    name: "Company-Specific"
+    keywords:
+      - Navisite
+      - Accenture
+      - internal application
+      - proprietary system
+
+  # 28. Browsers & Client Software
+  browsers_clients:
+    name: "Browsers & Client Software"
+    keywords:
+      - Chrome
+      - Firefox
+      - Safari
+      - Edge
+      - Internet Explorer
+      - Chromium
+      - WebKit
+      - Gecko
+      - V8
+      - browser
+      - Electron
+      - CEF
+
+  # 29. Virtualization & Hypervisors
+  virtualization_hypervisors:
+    name: "Virtualization & Hypervisors"
+    keywords:
+      - QEMU
+      - libvirt
+      - Virtualbox
+      - Parallels
+      - bhyve
+      - Hyper-V
+      - ESXi
+      - hypervisor
+      - guest OS
+      - host OS
+
+  # 30. Version Control & SCM
+  version_control:
+    name: "Version Control & SCM"
+    keywords:
+      - Git
+      - GitHub
+      - GitLab
+      - Bitbucket
+      - SVN
+      - Subversion
+      - Mercurial
+      - Perforce
+      - Azure Repos
+      - Gitea
+      - Gogs
+
+# Advanced regex patterns for more sophisticated matching
+regex_patterns:
+  enabled: true
+  patterns:
+    # Match CVE descriptions containing specific attack vectors
+    - pattern: '(remote\s+code\s+execution|arbitrary\s+code|command\s+injection)'
+      description: "Critical attack vectors"
+    # Match specific version patterns
+    - pattern: '(apache|nginx|tomcat|jboss)\s+\d+\.\d+'
+      description: "Web server versions"
+    # Match kernel vulnerabilities
+    - pattern: '(linux\s+kernel|windows\s+kernel|kernel\s+module)'
+      description: "Kernel vulnerabilities"
+    # Match authentication issues
+    - pattern: '(authentication\s+bypass|authorization\s+bypass|privilege\s+escalation)'
+      description: "Authentication/Authorization issues"
+    # Match cloud provider specific patterns
+    - pattern: '(AWS|Azure|GCP|Amazon\s+Web\s+Services|Microsoft\s+Azure|Google\s+Cloud)'
+      description: "Cloud provider mentions"
+
+# Ranking configuration
+ranking:
+  enabled: true
+  # Weight for different match types
+  weights:
+    exact_match: 10
+    category_match: 5
+    regex_match: 7
+    severity_critical: 15
+    severity_high: 10
+    severity_medium: 5
+  # Maximum number of results to return
+  max_results: 20

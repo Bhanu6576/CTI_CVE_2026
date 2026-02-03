@@ -1,0 +1,24 @@
+{
+  "name": "vulnerability-advisory-automation",
+  "version": "1.0.0",
+  "description": "Automated system for discovering, tracking, and notifying about high-severity CVEs using GitHub Actions",
+  "main": "src/cve-search.js",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": [
+    "cve",
+    "security",
+    "vulnerability",
+    "automation",
+    "nvd",
+    "teams",
+    "advisory"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}
+
